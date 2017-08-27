@@ -9,7 +9,6 @@ public class StandardResponse {
 
     public StandardResponse(StatusResponse status) {
         this.status = status;
-        this.message = "Data not found";
     }
 
     public StandardResponse(StatusResponse status, String message) {

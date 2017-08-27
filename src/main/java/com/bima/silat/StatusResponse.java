@@ -1,6 +1,6 @@
 package com.bima.silat;
 
-enum StatusResponse {
+public enum StatusResponse {
     SUCCESS ("Success"),
     ERROR ("Error");
 

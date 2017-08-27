@@ -1,5 +1,6 @@
 package com.bima.silat;
 
+import com.bima.silat.controllers.UserController;
 import spark.Spark;
 
 import static spark.Spark.get;
@@ -17,6 +18,8 @@ public class Main {
         Spark.after((request, response) -> {
             response.header("Content-Type", "application/json");
         });
+
+        new UserController();
 
     }
 }
