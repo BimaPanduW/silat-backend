@@ -13,4 +13,8 @@ public interface UserService {
     User getUser(String id);
 
     User editUser(User user) throws UserException;
+
+    void deleteUser(String id);
+
+    boolean userExist(String id);
 }

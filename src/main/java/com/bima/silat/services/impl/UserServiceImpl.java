@@ -26,4 +26,14 @@ public class UserServiceImpl implements UserService{
     public User editUser(User user) throws UserException {
         return null;
     }
+
+    @Override
+    public void deleteUser(String id) {
+
+    }
+
+    @Override
+    public boolean userExist(String id) {
+        return false;
+    }
 }
