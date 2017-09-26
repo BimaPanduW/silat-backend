@@ -26,6 +26,18 @@ public class User {
         this.isActive = isActive;
     }
 
+    public User(String name, String password, String role, String email, String phoneNumber,
+                Timestamp dateCreated, Timestamp dateUpdated, boolean isActive) {
+        this.name = name;
+        this.password = password;
+        this.role = role;
+        this.email = email;
+        this.phoneNumber = phoneNumber;
+        this.dateCreated = dateCreated;
+        this.dateUpdated = dateUpdated;
+        this.isActive = isActive;
+    }
+
     public Integer getId() {
         return id;
     }

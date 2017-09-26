@@ -30,9 +30,8 @@ public class DataBaseManager {
         Calendar calendar = Calendar.getInstance();
         Timestamp currentTimestamp = new java.sql.Timestamp(calendar.getTime().getTime());
 
-        userQuery.insert(new User(1, "bima", "1234",
-                "admin", "bima@email.com", "08887779",
-                currentTimestamp, currentTimestamp, true));
+        userQuery.insert(new User("bima", "1234", "admin", "bima@email.com",
+                "08887779", currentTimestamp, currentTimestamp, true));
 
         User user = userQuery.findById(1);
 

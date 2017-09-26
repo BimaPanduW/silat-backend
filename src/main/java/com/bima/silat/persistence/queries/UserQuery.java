@@ -12,8 +12,8 @@ import org.skife.jdbi.v2.sqlobject.customizers.RegisterMapper;
 public interface UserQuery {
     String table = "users";
 
-    @SqlUpdate("create table "+table+" (" +
-            "id int primary key, " +
+    @SqlUpdate("create table IF NOT EXISTS "+table+" (" +
+            "id int primary key AUTO_INCREMENT, " +
             "name VARCHAR(50), " +
             "password VARCHAR(10), " +
             "role VARCHAR(10), " +
@@ -26,8 +26,8 @@ public interface UserQuery {
     void createUserTable();
 
     @SqlUpdate("insert into "+table+" " +
-            "(id, name, password, role, email, phone_number, date_created, date_updated, is_active) " +
-            "values (:id, :name, :password, :role, :email, :phoneNumber, :dateCreated, :dateUpdated, :isActive )")
+            "(name, password, role, email, phone_number, date_created, date_updated, is_active) " +
+            "values (:name, :password, :role, :email, :phoneNumber, :dateCreated, :dateUpdated, :isActive )")
     void insert(@BindBean User user);
 
     @SqlQuery("select * from "+table+" where id = :id")
