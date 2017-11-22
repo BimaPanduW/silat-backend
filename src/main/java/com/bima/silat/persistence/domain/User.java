@@ -3,7 +3,7 @@ package com.bima.silat.persistence.domain;
 import java.sql.Timestamp;
 
 public class User {
-    private Integer id;
+    private long id;
     private String name;
     private String password;
     private String role;
@@ -13,7 +13,7 @@ public class User {
     private Timestamp dateUpdated;
     private boolean isActive;
 
-    public User(Integer id, String name, String password, String role, String email, String phoneNumber,
+    public User(long id, String name, String password, String role, String email, String phoneNumber,
                 Timestamp dateCreated, Timestamp dateUpdated, boolean isActive) {
         this.id = id;
         this.name = name;
@@ -38,7 +38,7 @@ public class User {
         this.isActive = isActive;
     }
 
-    public Integer getId() {
+    public long getId() {
         return id;
     }
 
