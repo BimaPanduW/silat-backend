@@ -12,6 +12,7 @@ public class EventMapper implements ResultSetMapper<Event> {
     public Event map(int i, ResultSet resultSet, StatementContext statementContext) throws SQLException {
         return new Event(
                 resultSet.getLong("id"),
+                resultSet.getString("name"),
                 resultSet.getLong("user_id"),
                 resultSet.getTimestamp("date_created"),
                 resultSet.getTimestamp("date_updated"),

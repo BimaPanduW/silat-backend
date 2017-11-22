@@ -11,8 +11,9 @@ public class Event {
     private Timestamp dateUpdated;
     private boolean isActive;
 
-    public Event(long id, long userId, Timestamp dateCreated, Timestamp dateUpdated, boolean isActive) {
+    public Event(long id, String name, long userId, Timestamp dateCreated, Timestamp dateUpdated, boolean isActive) {
         this.id = id;
+        this.name = name;
         this.userId = userId;
         this.dateCreated = dateCreated;
         this.dateUpdated = dateUpdated;
