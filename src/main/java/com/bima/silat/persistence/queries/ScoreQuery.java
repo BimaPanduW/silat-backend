@@ -8,7 +8,7 @@ import org.skife.jdbi.v2.sqlobject.SqlQuery;
 import org.skife.jdbi.v2.sqlobject.SqlUpdate;
 
 public interface ScoreQuery {
-    String table = "event";
+    String table = "score";
 
     @SqlUpdate("create table IF NOT EXISTS " + table + " (" +
             "id int primary key AUTO_INCREMENT, " +
